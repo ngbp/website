@@ -1,0 +1,79 @@
+/**
+ * Navbar customizations
+ */
+
+.navbar {
+  background: #FFF;
+  border-bottom: 1px solid #BBB;
+
+  .navbar-brand {
+    padding: (@navbar-padding-vertical - 5) @navbar-padding-horizontal;
+    color: #666;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    font-family: Nova Square, fixed;
+    letter-spacing: 3px;
+
+    .blink {
+      animation: blink 1.1s steps(30, start) infinite;
+      -webkit-animation: blink 1.1s steps(30, start) infinite;
+      -moz-animation: blink 1.1s steps(30, start) infinite;
+    }
+  }
+
+  .navbar-nav .navbar-btn {
+    padding: 6px 12px;
+
+    .button-variant( @btn-danger-color; @btn-danger-bg; @btn-danger-border );
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+

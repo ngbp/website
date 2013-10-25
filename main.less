@@ -53,92 +53,61 @@
 @import "./components/bootstrap/less/responsive-utilities.less";
 
 
+// Local Modules
+@import "./navbar.less";
+
+
 /**
  * Variables
  */
 
 @navbar-height: 70px;
+@footer-height: 150px;
+@brand-color: #9ECCF2;
 
 
 /**
  * General & Typography
  */
 
-body {
-  padding-top: @navbar-height;
+html, body {
+  height: 100%;
 }
 
 
 /**
- * Navbar customizations
+ * Fixed footer
  */
 
-.navbar {
-  background: #FFF;
-  border-bottom: 1px solid #BBB;
+.page-wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -@footer-height;
+  padding: @navbar-height 0 @footer-height;
+}
 
-  .navbar-brand {
-    padding: (@navbar-padding-vertical - 5) @navbar-padding-horizontal;
-    color: #666;
-    font-size: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    font-family: Nova Square, fixed;
-    letter-spacing: 3px;
+.footer {
+  height: @footer-height;
+  padding: 10px 0;
+  background-color: @brand-color;
 
-    .blink {
-      animation: blink 1.5s steps(30, start) infinite;
-      -webkit-animation: blink 1.5s steps(30, start) infinite;
-      -moz-animation: blink 1.5s steps(30, start) infinite;
+  a, a:visited {
+    text-decoration: underline;
+
+    &:hover, &:focus, &:active {
+    }
+  }
+
+  .nav-social {
+    a, a:visited {
+      font-size: 32px;
+      text-decoration: none;
+
+      &:hover, &:active, &:focus {
+      }
     }
   }
 }
 
-@keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
